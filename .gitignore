@@ -19,3 +19,20 @@
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+
+/Library
+/Temp
+/.vs
+bow.apk
+*.csproj
+*.sln
+compilation log.txt
+ipaclient
+/Assets/GameCamera/Scripts/Editor/Resources/RatingSetup.asset.meta
+/Assets/GameCamera/Scripts/Editor/Resources/RatingSetup.asset
+buildlog.txt
+buildlog-ios.txt
+/build
+Assets/Standard Assets/GameCamera/Scripts/Editor/Resources/RatingSetup.asset
+Assets/Standard Assets/GameCamera/Scripts/Editor/Resources/RatingSetup.asset.meta
+obj
