@@ -15,7 +15,8 @@ namespace Mip
             private set
             {
                 _cash = value;
-                mainCanvas.cashText.text = _cash.ToString("n0") + "원";
+                mainCanvas.cashText.text = (_cash < 0 ? "-" : "") + _cash.ToString("n0");
+                mainCanvas.cashText.color = _cash < 0 ? Color.red : Color.green;
             }
         }
         
@@ -35,15 +36,19 @@ namespace Mip
         int _cash = 1166220;
         int _stamina = 100;
         
+        public static GameContext Instance;
+        
         void Awake()
         {
+            Instance = this;
+            
             cash = cash;
         }
         
         public void SetEarnCash(string reason, int cashDelta)
         {
             cash += cashDelta;
-            mainCanvas.SetActiveEarnCash(reason + " +" + cashDelta.ToString("n0") + "원");
+            //mainCanvas.SetActiveEarnCash(reason + " +" + cashDelta.ToString("n0") + "원");
         }
         
         public void SetConsumeStamina(string reason, int staminaDelta)
